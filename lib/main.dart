@@ -1,3 +1,4 @@
+import 'package:cyclop/cyclop.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/test_widget.dart';
 
@@ -13,7 +14,17 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: TestWidget(),
+      home: Scaffold(body: SafeArea(child: ColorButton(
+        darkMode: true,
+        key: Key('c2'),
+        color: Colors.amber,
+        boxShape: BoxShape.rectangle,
+        size: 32,
+    config: ColorPickerConfig(
+        enableOpacity: false, enableLibrary: false
+    ),
+        onColorChanged: (value) => {},
+      ),),),
     );
   }
 }
