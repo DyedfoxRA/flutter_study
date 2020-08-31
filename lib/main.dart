@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/Dessert_carousel.dart';
+import 'package:flutter_study/dessert_carousel.dart';
 
 void main() => runApp(MaterialApp(home: MyApp()));
 

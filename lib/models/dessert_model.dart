@@ -5,15 +5,12 @@ class Dessert {
   String name;
   String Description;
 
-  Dessert({this.imageUrl, this.name, this.Description});
+  Dessert(this.imageUrl, this.name, this.Description);
 }
 
 List<Dessert> desserts = [
-  Dessert(
-      imageUrl: 'assets/images/raspberry_cake.jpg',
-      name: 'Black Raspberry Ombre Cake ',
-      Description:
-          'Four layers of Black Raspberry Ombre Cake ,covered and filled with Vanilla Icing and garnished with chocolate mousee. '),
+  Dessert('Black Raspberry Ombre Cake ',
+      'Four layers of Black Raspberry Ombre Cake ,covered and filled with Vanilla Icing and garnished with chocolate mousee. '),
   Dessert(
       imageUrl: 'assets/images/brownie_cheesecake.jpeg',
       name: 'Brownie Cheesecake',
@@ -35,7 +32,10 @@ List<Dessert> desserts = [
       Description:
           'A light and flavorful traditional Italian Dessert,alternating layers of mascarpone cheese and espresso-soaked lady fingers with a touch of liqueur'),
   Dessert(
-      imageUrl: 'assets/images/canoli.jpg', name: 'Canoli', Description: ''),
+    imageUrl: 'assets/images/canoli.jpg',
+    name: 'Canoli',
+    Description: '',
+  ),
   Dessert(
       imageUrl: 'assets/images/offering.jpg',
       name: 'Offering',
