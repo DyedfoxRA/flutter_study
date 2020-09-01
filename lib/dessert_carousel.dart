@@ -10,8 +10,7 @@ class DessertCarousel extends StatelessWidget {
         scrollDirection: Axis.vertical,
         itemCount: desserts.length,
         itemBuilder: (BuildContext context, int index) {
-          final Dessert dessert = desserts[index]; // fix using it
-          return DessertWidget(dessert);
+          return DessertWidget(desserts[index]);
         },
       ),
     );
@@ -19,21 +18,15 @@ class DessertCarousel extends StatelessWidget {
 }
 
 class DessertWidget extends StatelessWidget {
-  final Dessert _dessert; // use it
-
-
-  // use widget Padding
+  final Dessert _dessert;
   DessertWidget(this._dessert);
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      // check if nessesary stack
-      children: <Widget>[
+    return
         Padding(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.fromLTRB(10.0,5.0,10.0,7.0),
           child: Container(
-            // margin: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
             height: 170.0,
             width: 400.0,
             decoration: BoxDecoration(
@@ -42,31 +35,38 @@ class DessertWidget extends StatelessWidget {
             ),
             child: Row(
               children: <Widget>[
-                Expanded(
-                  child: ClipRRect(
+                SizedBox(
+                  width:5.0,
+                ),
+                 ClipRRect(
                     borderRadius: BorderRadius.circular(20.0),
                     child: Image(
                       width: 150.0,
                       image: AssetImage(
-                          '${desserts[index].imageUrl}'), // fix previos case
+                          '${_dessert.imageUrl}'), // fix previos case
                     ),
                   ),
+
+                SizedBox(
+                  width:10.0,
                 ),
                 Column(
                   children: <Widget>[
+                    SizedBox(height:5.0,),
                     Container(
-                      width: 230.0,
+                      width: 220.0,
                       child: Text(
-                        '${desserts[index].name}',
+                        '${_dessert.name}',
                         softWrap: true,
                         style: TextStyle(
                             color: Colors.grey[200], fontSize: 20),
                       ),
                     ),
+                    SizedBox(height:10.0,),
                     Container(
-                      width: 230,
+                      width: 220,
                       child: Text(
-                        '${desserts[index].Description}',
+                        '${_dessert.description}',
                         softWrap: true,
                         style: TextStyle(
                             color: Colors.grey[200], fontSize: 15.0),
@@ -77,8 +77,8 @@ class DessertWidget extends StatelessWidget {
               ],
             ),
           ),
-        ),
-      ],
-    );
+        );
+
+
   }
 }
