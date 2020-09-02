@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Dessert {
+class Dessert { // ctrl +alt + o
   String imageUrl;
   String name;
   String description;

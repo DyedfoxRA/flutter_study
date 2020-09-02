@@ -17,7 +17,7 @@ class DessertCarousel extends StatelessWidget {
   }
 }
 
-class DessertWidget extends StatelessWidget {
+class DessertWidget extends StatelessWidget { // move to new class
   final Dessert _dessert;
   DessertWidget(this._dessert);
 
@@ -25,9 +25,9 @@ class DessertWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return
         Padding(
-          padding: EdgeInsets.fromLTRB(10.0,5.0,10.0,7.0),
+          padding: EdgeInsets.fromLTRB(10.0,5.0,10.0,7.0), // edgeInsets has option like .all(10)
           child: Container(
-            height: 170.0,
+            height: 170.0, // try to remove it
             width: 400.0,
             decoration: BoxDecoration(
               color: Colors.grey[800],
@@ -43,7 +43,7 @@ class DessertWidget extends StatelessWidget {
                     child: Image(
                       width: 150.0,
                       image: AssetImage(
-                          '${_dessert.imageUrl}'), // fix previos case
+                          '${_dessert.imageUrl}'), // fix previos case + coma
                     ),
                   ),
 
@@ -59,7 +59,7 @@ class DessertWidget extends StatelessWidget {
                         '${_dessert.name}',
                         softWrap: true,
                         style: TextStyle(
-                            color: Colors.grey[200], fontSize: 20),
+                            color: Colors.grey[200], fontSize: 20),// comma кома кароч
                       ),
                     ),
                     SizedBox(height:10.0,),
