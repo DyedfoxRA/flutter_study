@@ -1,33 +1,32 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/models/dish_model.dart';
+class Salad_Page extends StatefulWidget {
+  @override
+  _Salad_PageState createState() => _Salad_PageState();
+}
 
-class DessertCarousel extends StatelessWidget {
+class _Salad_PageState extends State<Salad_Page> {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: ListView.builder(
         scrollDirection: Axis.vertical,
-        itemCount: desserts.length,
+        itemCount: salads.length,
         itemBuilder: (BuildContext context, int index) {
-          return DessertWidget(desserts[index]);
+          return SaladWidget(salads[index]);
         },
       ),
     );
   }
 }
-
-class DessertWidget extends StatelessWidget {
-  // move to new class
-  final Dish _dessert;
-  DessertWidget(this._dessert);
-
+class SaladWidget extends StatelessWidget {
+  final Dish _salad;
+  SaladWidget(this._salad);
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(10.0),
       child: Container(
-        height: 170.0, // try to remove it,
         width: 400.0,
         decoration: BoxDecoration(
           color: Colors.grey[800],
@@ -35,12 +34,13 @@ class DessertWidget extends StatelessWidget {
         ),
         child: Row(
           children: <Widget>[
+            SizedBox(width:5.0),
             ClipRRect(
               borderRadius: BorderRadius.circular(20.0),
               child: Image(
                 width: 150.0,
                 image: AssetImage(
-                  '${_dessert.imageUrl}',
+                  '${_salad.imageUrl}',
                 ), // fix previos case + coma
               ),
             ),
@@ -55,7 +55,7 @@ class DessertWidget extends StatelessWidget {
                 Container(
                   width: 220.0,
                   child: Text(
-                    '${_dessert.name}',
+                    '${_salad.name}',
 
                     softWrap: true,
                     style: TextStyle(
@@ -70,7 +70,7 @@ class DessertWidget extends StatelessWidget {
                 Container(
                   width: 220,
                   child: Text(
-                    '${_dessert.description}',
+                    '${_salad.description}',
                     softWrap: true,
                     style: TextStyle(
                       color: Colors.grey[200],
@@ -86,3 +86,4 @@ class DessertWidget extends StatelessWidget {
     );
   }
 }
+

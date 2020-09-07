@@ -1,27 +1,27 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/models/dish_model.dart';
+class Main_Course_Page extends StatefulWidget {
+  @override
+  _Main_Course_PageState createState() => _Main_Course_PageState();
+}
 
-class DessertCarousel extends StatelessWidget {
+class _Main_Course_PageState extends State<Main_Course_Page> {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: ListView.builder(
         scrollDirection: Axis.vertical,
-        itemCount: desserts.length,
+        itemCount: main_courses.length,
         itemBuilder: (BuildContext context, int index) {
-          return DessertWidget(desserts[index]);
+          return Main_CourseWidget(main_courses[index]);
         },
       ),
     );
   }
 }
-
-class DessertWidget extends StatelessWidget {
-  // move to new class
-  final Dish _dessert;
-  DessertWidget(this._dessert);
-
+class Main_CourseWidget extends StatelessWidget {
+Dish _main;
+Main_CourseWidget(this._main);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -40,7 +40,7 @@ class DessertWidget extends StatelessWidget {
               child: Image(
                 width: 150.0,
                 image: AssetImage(
-                  '${_dessert.imageUrl}',
+                  '${_main.imageUrl}',
                 ), // fix previos case + coma
               ),
             ),
@@ -55,7 +55,7 @@ class DessertWidget extends StatelessWidget {
                 Container(
                   width: 220.0,
                   child: Text(
-                    '${_dessert.name}',
+                    '${_main.name}',
 
                     softWrap: true,
                     style: TextStyle(
@@ -70,7 +70,7 @@ class DessertWidget extends StatelessWidget {
                 Container(
                   width: 220,
                   child: Text(
-                    '${_dessert.description}',
+                    '${_main.description}',
                     softWrap: true,
                     style: TextStyle(
                       color: Colors.grey[200],

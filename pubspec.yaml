@@ -35,14 +35,38 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   assets:
-    - assets/images/canoli.jpg
-    - assets/images/brownie_cheesecake.jpeg
-    - assets/images/carrot_cake.jpg
-    - assets/images/choco-cake.jpg
-    - assets/images/lemon-cream-cake.jpg
-    - assets/images/offering.jpg
-    - assets/images/raspberry_cake.jpg
-    - assets/images/tiramisu.jpg
+    - assets/images/dessert/canoli.jpg
+    - assets/images/dessert/brownie_cheesecake.jpeg
+    - assets/images/dessert/carrot_cake.jpg
+    - assets/images/dessert/choco-cake.jpg
+    - assets/images/dessert/lemon-cream-cake.jpg
+    - assets/images/dessert/raspberry_cake.jpg
+    - assets/images/dessert/tiramisu.jpg
+    - assets/images/starters/triopitaki.jpg
+    - assets/images/starters/cheese_plate.jpg
+    - assets/images/starters/garlic_bread.jpg
+    - assets/images/starters/grilled_mushrooms.jpeg
+    - assets/images/starters/onion_rings.jpg
+    - assets/images/salads/chicken_ceasar.jpg
+    - assets/images/salads/greek_salad.jpg
+    - assets/images/salads/potato_salad.jpg
+    - assets/images/soups/beetroot_soup.jpg
+    - assets/images/soups/onion_soup.jpg
+    - assets/images/soups/pumpkin_soup.jpg
+    - assets/images/main_course/bangers_mash.jpg
+    - assets/images/main_course/cottage_pie.jpg
+    - assets/images/main_course/kotlet-devolay.jpg
+    - assets/images/main_course/lancashire_hotpot.jpg
+    - assets/images/warm_beverages/americano.jpg
+    - assets/images/warm_beverages/cappuccino.jpg
+    - assets/images/warm_beverages/espresso.jpg
+    - assets/images/warm_beverages/hot-chocolate.jpg
+    - assets/images/warm_beverages/macchiato_1.jpg
+    - assets/images/cold_beverages/coca_cola.jpg
+    - assets/images/cold_beverages/nestea.jpg
+    - assets/images/cold_beverages/sprite.jpg
+    - assets/images/cold_beverages/fresh.jpg
+
   uses-material-design: true
 
 

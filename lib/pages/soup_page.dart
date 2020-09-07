@@ -1,27 +1,27 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/models/dish_model.dart';
+class Soup_Page extends StatefulWidget {
+  @override
+  _Soup_PageState createState() => _Soup_PageState();
+}
 
-class DessertCarousel extends StatelessWidget {
+class _Soup_PageState extends State<Soup_Page> {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: ListView.builder(
         scrollDirection: Axis.vertical,
-        itemCount: desserts.length,
+        itemCount: soups.length,
         itemBuilder: (BuildContext context, int index) {
-          return DessertWidget(desserts[index]);
+          return SoupWidget(soups[index]);
         },
       ),
     );
   }
 }
-
-class DessertWidget extends StatelessWidget {
-  // move to new class
-  final Dish _dessert;
-  DessertWidget(this._dessert);
-
+class SoupWidget extends StatelessWidget {
+  Dish _soup;
+  SoupWidget(this._soup);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -40,7 +40,7 @@ class DessertWidget extends StatelessWidget {
               child: Image(
                 width: 150.0,
                 image: AssetImage(
-                  '${_dessert.imageUrl}',
+                  '${_soup.imageUrl}',
                 ), // fix previos case + coma
               ),
             ),
@@ -55,7 +55,7 @@ class DessertWidget extends StatelessWidget {
                 Container(
                   width: 220.0,
                   child: Text(
-                    '${_dessert.name}',
+                    '${_soup.name}',
 
                     softWrap: true,
                     style: TextStyle(
@@ -70,7 +70,7 @@ class DessertWidget extends StatelessWidget {
                 Container(
                   width: 220,
                   child: Text(
-                    '${_dessert.description}',
+                    '${_soup.description}',
                     softWrap: true,
                     style: TextStyle(
                       color: Colors.grey[200],
@@ -83,6 +83,7 @@ class DessertWidget extends StatelessWidget {
           ],
         ),
       ),
-    );
+    );;
   }
 }
+
