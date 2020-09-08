@@ -1,33 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/models/dish_model.dart';
-import 'package:flutter_study/pages/home_page.dart';
-class Starter_Page extends StatefulWidget {
-  @override
-  _Starter_PageState createState() => _Starter_PageState();
-}
 
-class _Starter_PageState extends State<Starter_Page> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: ListView.builder(
-        scrollDirection: Axis.vertical,
-        itemCount: starters.length,
-        itemBuilder: (BuildContext context, int index) {
-          return StarterWidget(starters[index]);
-        },
-      ),
-    );
-  }
-}
-class StarterWidget extends StatelessWidget {
-  final Dish _starter;
-  StarterWidget(this._starter);
+class DishWidget extends StatelessWidget {
+  // move to new class
+  final Dish _dish;
+
+  DishWidget(this._dish);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(10.0),
       child: Container(
+        height: 170.0, // try to remove it,
         width: 400.0,
         decoration: BoxDecoration(
           color: Colors.grey[800],
@@ -35,13 +20,12 @@ class StarterWidget extends StatelessWidget {
         ),
         child: Row(
           children: <Widget>[
-            SizedBox(width:5.0),
             ClipRRect(
               borderRadius: BorderRadius.circular(20.0),
               child: Image(
                 width: 150.0,
                 image: AssetImage(
-                  '${_starter.imageUrl}',
+                  '${_dish.imageUrl}',
                 ), // fix previos case + coma
               ),
             ),
@@ -56,7 +40,7 @@ class StarterWidget extends StatelessWidget {
                 Container(
                   width: 220.0,
                   child: Text(
-                    '${_starter.name}',
+                    '${_dish.name}',
 
                     softWrap: true,
                     style: TextStyle(
@@ -71,7 +55,7 @@ class StarterWidget extends StatelessWidget {
                 Container(
                   width: 220,
                   child: Text(
-                    '${_starter.description}',
+                    '${_dish.description}',
                     softWrap: true,
                     style: TextStyle(
                       color: Colors.grey[200],
@@ -87,6 +71,3 @@ class StarterWidget extends StatelessWidget {
     );
   }
 }
-
-
-
