@@ -1,3 +1,4 @@
+import 'package:cyclop/cyclop.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/test_widget.dart';
 
@@ -8,6 +9,7 @@ void main() => runApp(MaterialApp(
 class NinjaCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Scaffold(
         backgroundColor: Colors.grey[900],
         appBar: AppBar(
@@ -77,5 +79,25 @@ class NinjaCard extends StatelessWidget {
             ],
           ),
         ));
+=======
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+
+        primarySwatch: Colors.blue,
+      ),
+      home: Scaffold(body: SafeArea(child: ColorButton(
+        darkMode: true,
+        key: Key('c2'),
+        color: Colors.amber,
+        boxShape: BoxShape.rectangle,
+        size: 32,
+    config: ColorPickerConfig(
+        enableOpacity: false, enableLibrary: false
+    ),
+        onColorChanged: (value) => {},
+      ),),),
+    );
+>>>>>>> cyclop
   }
 }
